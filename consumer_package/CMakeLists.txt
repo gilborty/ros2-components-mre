@@ -21,7 +21,7 @@ find_package(composition REQUIRED)
 add_executable(consumer_package
   src/main.cpp
 )
-target_link_libraries(consumer_package listener_component)
+target_link_libraries(consumer_package composition::listener_component)
 ament_target_dependencies(consumer_package
     rclcpp
     composition
